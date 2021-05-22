@@ -1,0 +1,284 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    background: url("./footer-bg.jpg") center center no-repeat;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    min-height: 100vh;
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+#footer .footer-top {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    /* padding: 30px 0; */
+}
+
+.footer-logo {
+    text-decoration: none;
+    color: #7cc576;
+}
+
+.footer-logo:hover {
+    color: #9ed49a;
+    text-decoration: none;
+}
+
+#footer .footer-top .footer-logo img {
+    /* height: 80px; */
+    width: 50%;
+}
+
+#footer .footer-top .footer-title {
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    font-family: 'Abril Fatface', cursive;
+    padding: 6rem 0 0 0;
+    margin-bottom: 0;
+}
+
+#footer .footer-top .footer-title-half {
+    color: #ff8906;
+}
+
+#footer .footer-top .footer-subtitle {
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 15px 0 1rem 0;
+    padding: 0;
+}
+
+#footer .footer-top .footer-newsletter {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+#footer .footer-top .footer-newsletter form {
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#footer .footer-top .footer-newsletter form input[type="text"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px);
+    border-radius: 50px;
+}
+
+#footer .footer-top .footer-newsletter datalist option {
+    width: 100%;
+}
+
+#footer .footer-top .footer-newsletter form .Hosp_Submit_Btn {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 25px;
+    font-family: 'Architects Daughter', cursive;
+    padding: 0 20px;
+    background: #2eac82;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-top .footer-newsletter form .Hosp_Submit_Btn:hover {
+    background: #5ab652;
+}
+
+@media screen and (max-width: 768px) {
+    #footer .footer-top .footer-title {
+        padding-top: 9rem;
+    }
+    #footer .footer-top .footer-subtitle {
+        margin-bottom: 2rem;
+    }
+}
+
+/*--------------------------Navbar--------------------------*/
+
+.nav_container {
+    padding: 12px 20px 0 20px;
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo a {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.header_logo a:hover {
+    color: #ff8906;
+    text-decoration: none;
+}
+
+.header_dropdown {
+    position: relative;
+}
+
+.admin_content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.admin_data {
+    cursor: pointer;
+    display: flex;
+}
+
+.admin_data .profile_icon {
+    font-size: 45px;
+    color: white;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.admin_data .profile_icon:hover {
+    color: #ff8906;
+}
+
+.admin_data .admin_name {
+    padding: 8px 0;
+    padding-left: 5px;
+    justify-content: baseline;
+}
+
+.admin_name span {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.admin_name span:hover {
+    color: #ff8906;
+}
+
+.admin_dropdownicon {
+    padding-top: 7px;
+    padding-left: 3px;
+    color: black;
+}
+
+.account_dropdown {
+    min-width: 305px;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border-radius: 11px;
+    border-bottom: 5px solid #00b4d8;
+    border-right: 5px solid #00b4d8;
+    border-left: 5px solid #00b4d8;
+    display: none;
+}
+
+.account_dropdown::after {
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    border-bottom: 9px solid #fff;
+    border-top: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    top: -18px;
+    right: 11px;
+}
+
+.account_dropdown_item a {
+    display: block;
+    color: #111;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+.account_dropdown_item a:hover {
+    background: #0077b6;
+    color: white;
+    text-decoration: none;
+}
+
+.account_dropdown_item a i {
+    line-height: 1;
+    margin-right: 20px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.account_dropdown_body {
+    text-align: start;
+}
+
+.account_dropdown_footer {
+    border-top: 1px solid #f2f2f2;
+}
+
+.account_dropdown_footer a {
+    display: block;
+    color: #333;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+.account_dropdown_footer a:hover {
+    background: #03045e;
+    color: white;
+    text-decoration: none;
+}
+
+.account_dropdown_footer a i {
+    line-height: 1;
+    margin-right: 20px;
+    font-size: 18px;
+    vertical-align: middle;
+}

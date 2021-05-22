@@ -1,0 +1,224 @@
+/* Core Styles */
+
+.DeptList {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: #efefef;
+    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    width: 960px;
+    margin: 0 auto 1.25rem auto;
+    text-align: center;
+    border-bottom: 2px solid rgba(29, 29, 29, 0.6);
+    padding: 1em;
+}
+
+.header h1 {
+    margin-bottom: 0.25em;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin-bottom: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: 700;
+    transition: all 0.35s ease-in-out;
+}
+
+.header a:hover {
+    color: #e99041;
+}
+
+.Dept_heading {
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+.Dept_heading h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.Dept_figure {
+    background: #1d1d1d;
+    display: inline-block;
+    margin: 25px;
+    max-width: 280px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.Dept_figure * {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+/* Section 2 - Hover Effect #02 */
+
+section.section-2 {
+    text-align: center;
+    padding: 1.5em 1em 1.4em 1em;
+    background: #1d1d1d;
+    color: #efefef;
+}
+
+.section-2 .Dept_figure {
+    background: #ffffff;
+    color: #1d1d1d;
+}
+
+.section-2 .Dept_figure img {
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+}
+
+.section-2 .Dept_figure figcaption {
+    position: absolute;
+    background-color: #efefef;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    padding: 5px 20px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    line-height: 1.1em;
+    /* 1.1em */
+    overflow: hidden;
+    height: 44px;
+    width: 250px;
+}
+
+.section-2 .Dept_figure h3 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.section-2 .Dept_figure h3.Dept_hover {
+    color: #efefef;
+    font-weight: 700;
+}
+
+.section-2 .Dept_figure a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section-2 .Dept_figure .Dept_title {
+    transform: translateY(50%);
+}
+
+.section-2 .Dept_figure .Dept_hover {
+    transform: translateY(50%);
+}
+
+.section-2 .Dept_figure:hover>img, .section-2 .Dept_figure.Dept_hover>img {
+    opacity: 0;
+}
+
+.section-2 .Dept_figure:hover figcaption, .section-2 .Dept_figure.Dept_hover figcaption {
+    background-color: #1d1d1d;
+}
+
+.section-2 .Dept_figure:hover .Dept_title, .section-2 .Dept_figure.Dept_hover .Dept_title {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+}
+
+.section-2 .Dept_figure:hover .Dept_hover, .section-2 .Dept_figure.Dept_hover .Dept_hover {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        width: 100%;
+    }
+}
+
+/*--------------------------Navbar--------------------------*/
+
+.dept_container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navbar-area {
+    background: rgb(15, 14, 23);
+    font-family: 'Rubik', sans-serif;
+    border-bottom: 1px solid #000;
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-logo .otherHalf {
+    color: #ff8906;
+}
+
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, .1);
+    color: #ff8906;
+}
+
+@media screen and (max-width: 500px) {
+    .site-navbar ul li a {
+        padding: 20px 10px;
+    }
+    .site-navbar ul li a:last-child {
+        padding-right: 0;
+    }
+}

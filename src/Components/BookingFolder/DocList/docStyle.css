@@ -1,0 +1,199 @@
+.DocList_Main {
+    background-color: rgba(15,14,23,0.94);
+    min-height: 100vh;
+}
+
+.Container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3.5rem 10px 2rem 10px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.responsive-table {
+    padding: 10px;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 20px;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-bottom: 25px;
+}
+
+.responsive-table .Header {
+    text-transform: uppercase;
+    font-size: 1.45rem;
+    background-color: #45489a;
+    border: 3px solid #ff8906;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.responsive-table .Table-Header {
+    background-color: #7f5af0;
+    border: 3px solid #ff8906;
+    border-top: 0;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.responsive-table .Table-Row {
+    background-color: white;
+    box-shadow: 0px 0px 9px 2px #ff8906;
+}
+
+
+.responsive-table .Col-1 {
+    flex-basis: 10%;
+}
+
+.responsive-table .Col-2 {
+    flex-basis: 20%;
+}
+
+.responsive-table .Col-3 {
+    flex-basis: 25%;
+}
+
+.responsive-table .Col-4 {
+    flex-basis: 34%;
+}
+
+@media screen and (max-width: 992px) {
+    .responsive-table .Table-Header {
+        font-size: 85%;
+    }
+    .responsive-table li {
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .responsive-table .Header {
+        margin-bottom: 1rem;
+    }
+    .responsive-table .Table-Header {
+        display: none;
+    }
+    .responsive-table li {
+        display: block;
+        font-size: 1rem;
+    }
+    .DocName {
+        padding-right: 10px;
+    }
+    .DocNameHalf {
+        padding-top: 3px;
+        padding-left: 5px;
+    }
+    .responsive-table .Col {
+        flex-basis: 100%;
+    }
+    .responsive-table .Col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsive-table .Col:before {
+        color: #6C7A89;
+        padding-right: 40px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+.Booking-Button {
+    border: 0.19rem solid #ff8906;
+    background-color: white;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    color: #2a88fa;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.Booking-Button:hover, .Booking-Button:focus {
+    background-color: #dbe7f1;
+    box-shadow: 0 .65em 0.75em -0.4em #ff8906;
+    /* text-shadow: 1px 1px 1px; */
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+/*--------------------------Navbar--------------------------*/
+
+.doc_container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border-bottom: 1px solid white;
+}
+
+.navbar-area {
+    background: rgb(15, 14, 23);
+    font-family: 'Rubik', sans-serif;
+    border-bottom: 1px solid #000;
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-logo .otherHalf {
+    color: #ff8906;
+}
+
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, .1);
+    color: #ff8906;
+}
+
+@media screen and (max-width: 500px) {
+    .site-navbar ul li a {
+        padding: 20px 10px;
+    }
+    .site-navbar ul li a:last-child {
+        padding-right: 0;
+    }
+}
