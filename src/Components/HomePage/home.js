@@ -63,7 +63,7 @@ export default class home extends Component {
 
                 <nav className="navbar navbar-expand-md fixed-top top-nav">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="index.html"><strong>DoctorsVerse</strong></a>
+                        <div className="navbar-brand"><strong>DoctorsVerse</strong></div>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
