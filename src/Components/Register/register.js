@@ -46,7 +46,8 @@ export default class register extends Component {
             ErrorText.innerText = "Fill out correctly!!!!!";
         }
         else {
-            axios.post("hhttps://doctorsverse-backend.herokuapp.com/register", reactData)
+            // axios.post("http://localhost:3001/register", reactData)
+            axios.post("https://doctorsverse-backend.herokuapp.com/register", reactData)
                 .then(function (response) {
                     console.log(response);
                     localStorage.setItem("tokenRegister", "true")
