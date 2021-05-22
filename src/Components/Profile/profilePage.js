@@ -23,8 +23,9 @@ export default class profilePage extends Component {
     componentDidMount() {
         let id = localStorage.getItem("UserID")
         // axios.get("https://mocki.io/v1/10050b8d-c576-4d2e-8f9c-af24f054fc0b")
-        
-        axios.get("http://localhost:3001/profile/" + id)
+
+        // axios.get("http://localhost:3001/profile/" + id)
+        axios.get("https://doctorsverse-backend.herokuapp.com/profile/" + id)
             .then(response => {
                 const data = response.data
                 this.setState({

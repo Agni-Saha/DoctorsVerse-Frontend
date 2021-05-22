@@ -46,7 +46,7 @@ export default class register extends Component {
             ErrorText.innerText = "Fill out correctly!!!!!";
         }
         else {
-            axios.post("http://localhost:3001/register", reactData)
+            axios.post("hhttps://doctorsverse-backend.herokuapp.com/register", reactData)
                 .then(function (response) {
                     console.log(response);
                     localStorage.setItem("tokenRegister", "true")
@@ -55,7 +55,7 @@ export default class register extends Component {
                 })
                 .catch(function (error) {
                     localStorage.setItem("tokenRegister", null)
-                    if( error.response.status === 409 ){
+                    if (error.response.status === 409) {
                         ErrorText.innerText = "User Already Registered"
                     }
                 })

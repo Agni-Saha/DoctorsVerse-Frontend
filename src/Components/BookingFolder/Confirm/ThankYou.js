@@ -24,7 +24,8 @@ export default class ThankYou extends Component {
         let id = localStorage.getItem("bookingID");
         // axios.get("https://mocki.io/v1/10050b8d-c576-4d2e-8f9c-af24f054fc0b")
         
-        axios.get("http://localhost:3001/bookings/" + id)
+        // axios.get("http://localhost:3001/bookings/" + id)
+        axios.get("https://doctorsverse-backend.herokuapp.com/bookings/" + id)
             .then(response => {
                 const arr = response.data.map(items => items);
                 this.setState(

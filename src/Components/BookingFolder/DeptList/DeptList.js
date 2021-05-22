@@ -28,7 +28,8 @@ export default class DeptList extends Component {
         console.log(hospID)
 
         // axios.get("https://mocki.io/v1/c88ccb5b-9e3a-4129-9b30-a42ff8c02035")
-        axios.get("http://localhost:3001/hospitals/" + hospID)
+        // axios.get("http://localhost:3001/hospitals/" + hospID)
+        axios.get("https://doctorsverse-backend.herokuapp.com/hospitals/" + hospID)
             .then(response => {
                 const list = response.data;
                 this.setState(
