@@ -19,11 +19,7 @@ export default class bookingForm extends Component {
             loggedIn = false
         }
 
-        let T = localStorage.getItem("startTime");
-        let hr = T.substring(0, T.indexOf(":"))
-        let min = T.substring(T.indexOf(":") + 1, T.lastIndexOf(":"))
         // let docID = localStorage.getItem("docID")
-
         this.state = {
             name: "",
             email: "",
@@ -31,7 +27,7 @@ export default class bookingForm extends Component {
             age: "",
             phoneNo: "",
             address: "",
-            startDate: setHours(setMinutes(setSeconds(new Date(), "00"), min), hr),
+            startDate: "",
             loggedIn
         }
     }
@@ -72,9 +68,12 @@ export default class bookingForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
+        let T = localStorage.getItem("startTime");
+        let hr = T.substring(0, T.indexOf(":"))
+        let min = T.substring(T.indexOf(":") + 1, T.lastIndexOf(":"))
         let val = this.state.startDate;
-        val = moment(val).format("YYYY-MM-DD HH:mm:ss")
-
+        let dateWithTime = moment(this.state.startDate).set('hour', hr).set('minute', min).utc();
+        val = moment(dateWithTime).format("YYYY-MM-DD HH:mm:ss")
         let ErrorText = document.querySelector(".Error_Handling")
 
         const formData = {
