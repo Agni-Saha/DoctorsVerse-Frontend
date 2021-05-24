@@ -25,7 +25,7 @@ export default class ThankYou extends Component {
     componentDidMount() {
         let id = localStorage.getItem("bookingID");
         // axios.get("https://mocki.io/v1/10050b8d-c576-4d2e-8f9c-af24f054fc0b")
-
+        
         // axios.get("http://localhost:3001/bookings/" + id)
         axios.get("https://doctorsverse-backend.herokuapp.com/bookings/" + id)
             .then(response => {
@@ -37,9 +37,9 @@ export default class ThankYou extends Component {
             })
     }
 
-    TimetoIST(time) {
+    TimetoIST(time){
         let b = moment(time).tz("Asia/Kolkata");
-        b.add(330, 'minutes');
+        b.add(330,'minutes');
         return b.format('HH:mm A');
     }
 

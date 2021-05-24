@@ -61,12 +61,12 @@ export default class docList extends Component {
         localStorage.setItem("startTime", startTime);
         localStorage.setItem("docID", newVal);
     }
-    TimetoIST(time) {
+    TimetoIST(time){
         let b = moment(time).tz("Asia/Kolkata");
-        b.add(330, 'minutes');
+        b.add(330,'minutes');
         return b.format('HH:mm A');
     }
-
+    
     DocList() {
         let deptList = [];
         let a = this.state.Response;
