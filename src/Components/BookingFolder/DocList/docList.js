@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 import './docStyle.css'
+import moment from 'moment'
+import 'moment-timezone';
 
 export default class docList extends Component {
     constructor(props) {
@@ -59,11 +61,16 @@ export default class docList extends Component {
         localStorage.setItem("startTime", startTime);
         localStorage.setItem("docID", newVal);
     }
-
+    TimetoIST(time){
+        let b = moment(time).tz("Asia/Kolkata");
+        //b.add(330,'minutes');
+        return b.format('HH:mm A');
+    }
+    
     DocList() {
         let deptList = [];
         let a = this.state.Response;
-
+        //let b = moment.tz(item.start_time, "Asia/Kolkata").format();
         for (let i = 0; i < a.doctors.length; i++) {
             if (a.doctors[i].department[0].specialization_name === this.state.Department)
                 deptList.push(a.doctors[i].hospitaldoctor_id)
@@ -85,9 +92,9 @@ export default class docList extends Component {
                         <div className="Col Col-2" data-label="Phone Number">{item.contact}</div>
                         <div className="Col Col-2" data-label="Day of Week">{item.day_of_week}</div>
                         <div className="Col Col-2" data-label="Timings">
-                            <span>{new Date(item.start_time).toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }).split(",")[1]}</span>
+                            <span>{this.TimetoIST(item.start_time)}</span>
                             -<br />
-                            <span>{new Date(item.end_time).toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }).split(",")[1]}</span>
+                            <span>{this.TimetoIST(item.end_time)}</span>
                         </div>
                         <div className="Col Col-1" data-label="Fee">{item.fees}</div>
                         <div className="Col Col-3" data-label="Book Appointment">

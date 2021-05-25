@@ -65,6 +65,12 @@ export default class profilePage extends Component {
         }
     }
 
+    TimetoIST(time){
+        let b = moment(time).tz("Asia/Kolkata");
+        //b.add(30,'minutes');
+        return b.format('HH:mm A');
+    }
+
     appointmentFunc = () => {
         let val = this.state.profileDetails;
         let k = 0
@@ -113,13 +119,10 @@ export default class profilePage extends Component {
 
                     <div className="Appointment-taken-time">
                         <h4>Appointment taken on :<br />
-                            <span>{moment(item.bookingDetails.appointment_taken_date
-                                .substring(0, item.bookingDetails
-                                    .appointment_taken_date.indexOf("T")))
-                                .format('MMMM Do YYYY')
-                            }</span> at <span>{new Date(item.bookingDetails.appointment_taken_date)
-                                .toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })
-                                .split(",")[1].trim()}</span>
+                            <span>{moment(item.bookingDetails.appointment_taken_date).format('MMMM DD YYYY')}
+                            </span> at <span>
+                                {this.TimetoIST(item.bookingDetails.appointment_taken_date)}
+                                </span>
                         </h4>
                     </div>
                 </div>
