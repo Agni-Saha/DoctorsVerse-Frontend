@@ -239,6 +239,7 @@ a.text_primary:hover {
     font-weight: 700;
     font-family: 'Abril Fatface', cursive;
     font-size: 3.8rem;
+    letter-spacing: 1.5px;
 }
 
 .intro .carousel-item {
