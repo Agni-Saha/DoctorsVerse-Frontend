@@ -214,6 +214,19 @@ a {
     text-transform: capitalize;
 }
 
+.sidebar-navigation nav .Backpage {
+    color: #ff8906;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0.1rem;
+    transition: all 0.25s;
+}
+
+.sidebar-navigation nav .Backpage:hover {
+    color: #ff8906;
+    text-shadow: 2px 2px 2px black;
+}
+
 .circle {
     margin: 0 10px 0 5px;
     height: 10px;
@@ -232,9 +245,9 @@ a {
     left: 0;
     bottom: 5.5px;
     background-color: #fff;
-    -webkit-transition: -webkit-transform 0.1s linear, width 0.6s linear;
-    -moz-transition: -webkit-transform 0.1s linear, width 0.6s linear;
-    transition: transform 0.1s linear, width 0.3s linear;
+    -webkit-transition: -webkit-transform 0.1s ease, width 0.6s ease;
+    -moz-transition: -webkit-transform 0.1s ease, width 0.6s ease;
+    transition: transform 0.1s ease, width 0.3s ease;
 }
 
 .sidebar-navigation nav a:focus {

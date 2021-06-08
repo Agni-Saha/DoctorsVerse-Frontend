@@ -65,7 +65,7 @@ export default class profilePage extends Component {
         }
     }
 
-    TimetoIST(time){
+    TimetoIST(time) {
         let b = moment(time).tz("Asia/Kolkata");
         //b.add(30,'minutes');
         return b.format('HH:mm A');
@@ -122,7 +122,7 @@ export default class profilePage extends Component {
                             <span>{moment(item.bookingDetails.appointment_taken_date).format('MMMM DD YYYY')}
                             </span> at <span>
                                 {this.TimetoIST(item.bookingDetails.appointment_taken_date)}
-                                </span>
+                            </span>
                         </h4>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ export default class profilePage extends Component {
                         <nav>
                             <ul className="nav navbar-nav">
                                 <li><a href="#top">Home</a></li>
-                                <li><a href="#details">details</a></li>
+                                <li><a href="#details">Details</a></li>
                                 <li><a href="#appointments">Recent Appointments</a></li>
                                 <li><a href="/">logout</a></li>
                             </ul>
@@ -174,7 +174,7 @@ export default class profilePage extends Component {
                                 <a href="#details">
                                     <span className="rect"></span>
                                     <span className="circle"></span>
-                                    details
+                                    Details
                                 </a>
                             </li>
                             <li>
@@ -185,10 +185,10 @@ export default class profilePage extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="/banner">
+                                <a href="/banner" className="Backpage">
                                     <span className="rect"></span>
                                     <span className="circle"></span>
-                                    logout
+                                    Back to Hospitals Page
                                 </a>
                             </li>
                         </ul>
